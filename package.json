@@ -1,0 +1,18 @@
+{
+  "name": "delft-headless",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "iiif-hss serve --scripts ./scripts",
+    "build": "iiif-hss build --out ./public --scripts ./scripts"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "iiif-hss": "^0.1.5"
+  }
+}

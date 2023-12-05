@@ -1,0 +1,43 @@
+server:
+  url: http://localhost:7111
+
+# Run these everywhere.
+run:
+  - delft-labels
+  - extract-slug-source
+  - extract-label-string
+  - extract-thumbnail
+  - manifest-sqlite
+  - metadata-analysis
+
+stores:
+
+  manifests:
+    type: iiif-json
+    path: ./manifests
+    pattern: "**/*.json"
+
+  libis-objects:
+    type: iiif-json
+    path: ./libis/objects
+    destination: manifests
+    pattern: "**/*.json"
+    run:
+      - extract-topics
+      - delft-image-source
+      - delft-related
+    config:
+      extract-topics:
+        commaSeparated: ['material']
+        topicTypes:
+          material: [ 'Materiaal', 'Material' ]
+          date: [ 'Date', 'Datering' ]
+          Maker: [ 'Maker' ]
+          Publisher: [ 'Publisher' ]
+
+  libis-collections:
+    type: iiif-json
+    path: ./libis/collections
+    destination: collections
+    pattern: "**/*.json"
+
