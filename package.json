@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "iiif-hss serve --scripts ./scripts",
-    "build": "iiif-hss build --out ./public --scripts ./scripts"
+    "build": "iiif-hss build --scripts ./scripts"
   },
   "devDependencies": {
     "bun-types": "latest"
