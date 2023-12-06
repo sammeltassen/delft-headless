@@ -1,5 +1,5 @@
 server:
-  url: http://localhost:7111
+  url: https://main--strong-gaufre-f689bf.netlify.app
 
 # Run these everywhere.
 run:
