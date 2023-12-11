@@ -13,6 +13,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "iiif-hss": "^0.1.5"
+    "iiif-hss": "^0.1.6"
   }
 }
