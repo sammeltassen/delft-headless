@@ -41,3 +41,14 @@ stores:
     destination: collections
     pattern: "**/*.json"
 
+  delta-archief:
+    type: iiif-json
+    path: ./delta-archief
+    destination: manifests
+    pattern: "**/*.json"
+
+  map-series:
+    type: iiif-json
+    path: ./map-series
+    destination: manifests
+    pattern: "**/*.json"
